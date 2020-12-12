@@ -1,0 +1,248 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    overflow-x: hidden;
+    background-color: #1F1B24;
+}
+/* Top and Left of Site (same on every page) */
+.nav-head {
+    background-color: #121212;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 10;
+}
+.nav-left, .nav-left-menu {
+    position: fixed;
+    left: 3%;
+    top: 30px;
+}
+.nav-left img {
+    scale: .5;
+}
+/* search bar + button */
+.nav-center {
+    position: relative;
+    top: 0;
+    left: 25%;
+    top: 25px;
+}
+button {
+    width: 100px;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(209,159,228,1) 0%, rgba(49,198,232,1) 100%);
+    border-radius: 10px;
+    border: 1px solid #121212;
+    box-shadow: 1px 1px 1px #1f1b24;
+}
+button:hover {
+    width: 100px;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(209,159,228,1) 0%, rgba(49,198,232,1) 100%);
+    border-radius: 10px;
+    border: 1px solid #121212;
+    box-shadow: 1px 1px 10px #ccc;
+    z-index: -1;
+}
+/* selectors on the right side of page */
+.nav-right {
+    position: relative;
+    left: 52%;
+    top: 25px;
+}
+.nav-right i {
+    scale: 1.5;
+    margin-left: 35px;
+}
+/* text colors and sizes */
+.nav-head a, .side-bar a, .side-bar i {
+    color: #ccc;
+    padding-top: 20px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.nav-right i:hover {
+    font-size: 15px;
+    height: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.side-bar {
+    font-size: 15px;
+    color: #ccc;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: fixed;
+    width: 150px;
+    bottom: 0;
+    left: -15px;
+    top: 0;
+    margin: 0;
+    padding-left: 35px;
+    padding-top: 100px;
+}
+.side-bar a img {
+    scale: .7;
+    margin-bottom: -8px;
+    margin-left: -10px;
+    padding-top: 10px;
+}
+.side-bar a:hover {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Upload New Video */
+form {
+    color: #ccc;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    left: -75px;
+    text-align: center;
+}
+input, textarea, select {
+    background-color: #ccc;
+    color: #121212;
+    border-radius: 10px;
+}
+#title, #upload {
+    width: 328px;
+}
+/* Submit Button */
+#submit {
+    height: 40px;
+    width: 100px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(209,159,228,1) 0%, rgba(49,198,232,1) 100%);
+}
+#submit:hover {
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(209,159,228,1) 0%, rgba(49,198,232,1) 100%);
+    border-radius: 10px;
+    border: 1px solid #121212;
+    box-shadow: 1px 1px 10px #ccc;
+    z-index: -1;
+}
+
+/* video section */
+iframe {
+    border: 2px ridge #ccc;
+}
+.featured {
+    position: relative;
+    left: 20px;
+    top: 0px;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 25px;
+}
+.featured iframe {
+    height: 400px;
+    width: 600px;
+    border-radius: 15px;
+}
+/* description for all pages */
+.description p {
+    position: absolute;
+    right: 200px;
+    top: 150px;
+    width: 400px;
+    height: 400px;
+    font-size: 15px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+/* main part of each page, where the content is */
+.video-body {
+    background-color: #1F1B24;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 65px;
+    left: 160px;
+}
+/* just for collection pages */
+.collection-page h2 {
+    color: #ccc;
+    text-align: center;
+    padding-right: 175px;
+    font-size: 75px;
+    margin-top: -200px;
+}
+/* multi-video & collection section */
+.video-roll {
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    z-index: 0;
+}
+/* style and hover for video titles */
+.colm a {
+    color: #ccc;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+.collection a:hover, .colm h2:hover {
+    background-color: #ccc;
+    color: #121212;
+    text-decoration: none;
+}
+/* small video frames at bottom of each page */
+.colm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-basis: 30%;
+    text-align: center;
+    margin: 5px;
+}
+.colm iframe {
+    width: 200px;
+    height: 175px;
+    border-radius: 10px;
+    align-self: center;
+}
+.colm h2 {
+    color: #ccc;
+    text-decoration: none;
+}
+.colm img {
+    border-radius: 50%;
+    width: 50%;
+    scale: .2;
+}
+
+/* Library Page */
+h3 {
+    color: #ccc;
+    z-index: 4;
+    font-size: 20px;
+    text-decoration: underline;
+}
+div .library iframe {
+    width: 20px;
+    height: 20px;
+}
+
+/* footer */
+footer {
+    color: #ccc;
+    font-size: 20px;
+    position: absolute;
+    padding-left: 37%;
+    bottom: -250px;
+}
